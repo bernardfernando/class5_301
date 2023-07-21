@@ -1,4 +1,5 @@
 import React from "react";
+import "../Header/Header.css";
 
 import { Link } from "react-router-dom";
 
@@ -6,7 +7,7 @@ export default function Header() {
   return (
     <header>
       <h1>My Website</h1>
-      <nav>
+      <nav className="nav1">
         <ul>
           <li>
             <Link to={"/"}>Home</Link>

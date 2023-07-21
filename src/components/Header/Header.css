@@ -1,0 +1,15 @@
+header nav ul li a {
+  font-size: 2rem;
+  color: red;
+  list-style: none;
+  font-style: none;
+  padding: 5px;
+  border: 1px solid red;
+  background-color: rgb(255, 233, 265);
+}
+nav ul {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
