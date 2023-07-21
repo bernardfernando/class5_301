@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Redirect from Tim Smith on 21 July 2023
+
+Redirects!
+
+Our Single Page Application (SPA) is very clever, and when we click a link that takes us to `/about` it rerenders the parts of the page that NEED to be rerendered, and nothing else.
+
+Unfortunately, when we visit the page directly, React can't be all clever and say "hey show the about page stuffs" and the browser looks for an about page that doesn't actually exist... WHAT?!
+
+**Solution:** We need to tell the browser "Everytime you access this page, go to the /index.html". We do that by creating a file called `_redirects` in out `public` directory.
+
+That file looks like this:
+`/*.   /index.html    200`
+The format is:
+`placeWeWantToRedirectFrom    placeWeWantToRedirectTo    rule(permanent or not)`
+
+So now when you access you `/about` page directly, the browser shows the index.html, but react is all clever like, and shows the content based on the URL, in this case, the about page!
